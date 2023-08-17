@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arnob's Text Editor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/7e5156c071.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="bg-[#94c4fe] gap-2">
+    <header class="flex justify-center items-center">
+      <h1 class="text-center mt-12 text-5xl font-semibold text-white">
+        Arnob's Text Editor!
+      </h1>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="1em"
+        viewBox="0 0 576 512"
+      >
+        <path
+          d="M112 0C99.1 0 87.4 7.8 82.5 19.7l-66.7 160-13.3 32c-6.8 16.3 .9 35 17.2 41.8s35-.9 41.8-17.2L66.7 224h90.7l5.1 12.3c6.8 16.3 25.5 24 41.8 17.2s24-25.5 17.2-41.8l-13.3-32-66.7-160C136.6 7.8 124.9 0 112 0zm18.7 160H93.3L112 115.2 130.7 160zM256 32v96 96c0 17.7 14.3 32 32 32h80c44.2 0 80-35.8 80-80c0-23.1-9.8-43.8-25.4-58.4c6-11.2 9.4-24 9.4-37.6c0-44.2-35.8-80-80-80H288c-17.7 0-32 14.3-32 32zm96 64H320V64h32c8.8 0 16 7.2 16 16s-7.2 16-16 16zm-32 64h32 16c8.8 0 16 7.2 16 16s-7.2 16-16 16H320V160zM566.6 310.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L352 434.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0l192-192z"
+        />
+      </svg>
+    </header>
+    <main class="w-3/4 border-2 border-black mt-12 mx-auto rounded-lg">
+      <div class="grid grid-cols-3 justify-between p-6 gap-64">
+        <div>
+          <i id="icon-bold" class="fa-solid fa-bold mr-4 ml-2"></i>
+          <i id="icon-italic" class="fa-solid fa-italic mr-4"></i>
+          <i id="icon-underlined" class="fa-solid fa-underline"></i>
+        </div>
+        <div>
+          <i id="left" class="fa-solid fa-align-left mr-4"></i>
+          <i id="center" class="fa-solid fa-align-center mr-4"></i>
+          <i id="right" class="fa-solid fa-align-right mr-4"></i>
+          <i id="justify" class="fa-solid fa-align-justify"></i>
+        </div>
+        <div>
+          <input
+            class="w-8 mr-4 rounded-md"
+            type="number"
+            name=""
+            id="font-size"
+            value="16"
+            min="16"
+            max="30"
+          />
+
+          <button id="font-size-up">
+            <i class="fa-solid fa-up-long text-white"></i>
+          </button>
+          <button id="font-size-down">
+            <i class="fa-solid fa-down-long ml-2 text-white"></i>
+          </button>
+
+          <i class="fa-solid fa-a mr-4"></i>
+          <input type="color" name="" id="" />
+        </div>
+      </div>
+      <hr class="mb-6 bg-black border-none h-[2px] w-[94%] mx-auto" />
+      <div class="text-center mb-4">
+        <textarea
+          id="text-input"
+          class="p-4 rounded-lg w-[94%] text-left"
+          name=""
+          cols="100"
+          rows="15"
+        ></textarea>
+      </div>
+    </main>
+    <script src="js/index.js"></script>
+  </body>
+</html>
